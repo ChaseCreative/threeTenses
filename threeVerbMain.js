@@ -44,20 +44,21 @@ function gameFourTitle(){return game4Title;}
 
 
 
-
+    var thirdPerSing = ["He", "She", "It"];
+    var ran3PSIndex = Math.floor(Math.random() * 3);
 
 var verbsFirst = [["am", "loving"], ["laud", "praising"],["festin", "hurrying"],["narr", "telling"],["nec", "killing"],["serv", "saving"],["labor", "working"], ["habit", "living"], ["cogit", "thinking"], ["cant", "singing"], ["d", "giving"],["laud", "praising"],["serv", "saving"],["voc", "calling"],["err", "wandering"], ["recit", "reciting"],["postul", "demanding"],["vituper", "scolding"],["puls", "hitting"],["salut", "greeting"],["par", "preparing"],["clam", "shouting"],["intr", "entering"],["st", "standing"],["port", "carrying"],["habit", "living"],["rog", "asking"],["conserv", "preserving"]];
 
-var verbsFirstPer = [["amav", "loved"], ["laudav", "praised"],["festinav", "hurried"],["narrav", "told"],["necav", "killed"],["servav", "saved"],["laborav", "worked"], ["habitav", "lived"], ["cogitav", "thought"], ["cantav", "sang"], ["ded", "gave"],["laudav", "praised"],["servav", "saved"],["vocav", "called"],["errav", "wandered"],["recitav", "recited"],["postulav", "demanded"],["vituperav", "scolded"],["pulsav", "hit"],["salutav", "greeted"],["parav", "prepared"],["clamav", "shouted"],["intrav", "entered"],["stet", "stood"],["portav", "carried"],["habitav", "lived"],["rogav", "asked"],["conservav", "preserved"]];
+var verbsFirstPer = [["amav", "loved"], ["vīc", "conquered"],["vīd", "saw"],["ēg", "drove"],["fēc", "made"],["vīd", "saw"], ["sēd", "sat"],["laudav", "praised"],["festinav", "hurried"],["narrav", "told"],["necav", "killed"],["servav", "saved"],["laborav", "worked"], ["habitav", "lived"], ["cogitav", "thought"], ["cantav", "sang"], ["ded", "gave"],["laudav", "praised"],["servav", "saved"],["vocav", "called"],["errav", "wandered"],["recitav", "recited"],["postulav", "demanded"],["vituperav", "scolded"],["pulsav", "hit"],["salutav", "greeted"],["parav", "prepared"],["clamav", "shouted"],["intrav", "entered"],["stet", "stood"],["portav", "carried"],["habitav", "lived"],["rogav", "asked"],["conservav", "preserved"]];
 
 
-var perEndingsFirst = [["ō", "I am "], ["ās", "You are "], ["at", "She/he/it is "], ["ant", "They are "]];
+var perEndingsFirst = [["ō", "I am "], ["ās", "You are "], ["at", thirdPerSing[ran3PSIndex] + " is "], ["ant", "They are "]];
 //var perEndingsFirst = [["ō", "I am "], ["ās", "You are "], ["at", "She/he/it is "], ["āmus", "We are "], ["ātis", "Ya'll are "], ["ant", "They are "]];
 
-var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "],  ["ābant", "They were "]];
+var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", thirdPerSing[ran3PSIndex] + " was "],  ["ābant", "They were "]];
 //var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "], ["ābamus", "We were "], ["ābatis", "Ya'll were "], ["ābant", "They were "]];
 
-var perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", "She/he/it "], ["ērunt", "They "]];
+var perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", thirdPerSing[ran3PSIndex] + " "], ["ērunt", "They "]];
 //var perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", "She/he/it "], ["imus", "We "], ["istis", "Ya'll "], ["ērunt", "They "]];
 
 var answers = ["answerOne", "answerTwo", "answerThree", "answerFour"];
@@ -72,7 +73,27 @@ var answers = ["answerOne", "answerTwo", "answerThree", "answerFour"];
 //Random index for Shuffle
 	 var randomIndex = 0;
 
+function reset3PSIndex(){
+  thirdPerSing = ["He", "She", "It"];
+  ran3PSIndex = Math.floor(Math.random() * 3);
 
+verbsFirst = [["am", "loving"], ["laud", "praising"],["festin", "hurrying"],["narr", "telling"],["nec", "killing"],["serv", "saving"],["labor", "working"], ["habit", "living"], ["cogit", "thinking"], ["cant", "singing"], ["d", "giving"],["laud", "praising"],["serv", "saving"],["voc", "calling"],["err", "wandering"], ["recit", "reciting"],["postul", "demanding"],["vituper", "scolding"],["puls", "hitting"],["salut", "greeting"],["par", "preparing"],["clam", "shouting"],["intr", "entering"],["st", "standing"],["port", "carrying"],["habit", "living"],["rog", "asking"],["conserv", "preserving"]];
+
+verbsFirstPer = [["amav", "loved"], ["vīc", "conquered"],["vīd", "saw"],["ēg", "drove"],["fēc", "made"],["vīd", "saw"], ["sēd", "sat"],["laudav", "praised"],["festinav", "hurried"],["narrav", "told"],["necav", "killed"],["servav", "saved"],["laborav", "worked"], ["habitav", "lived"], ["cogitav", "thought"], ["cantav", "sang"], ["ded", "gave"],["laudav", "praised"],["servav", "saved"],["vocav", "called"],["errav", "wandered"],["recitav", "recited"],["postulav", "demanded"],["vituperav", "scolded"],["pulsav", "hit"],["salutav", "greeted"],["parav", "prepared"],["clamav", "shouted"],["intrav", "entered"],["stet", "stood"],["portav", "carried"],["habitav", "lived"],["rogav", "asked"],["conservav", "preserved"]];
+
+
+perEndingsFirst = [["ō", "I am "], ["ās", "You are "], ["at", thirdPerSing[ran3PSIndex] + " is "], ["ant", "They are "]];
+//var perEndingsFirst = [["ō", "I am "], ["ās", "You are "], ["at", "She/he/it is "], ["āmus", "We are "], ["ātis", "Ya'll are "], ["ant", "They are "]];
+
+perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", thirdPerSing[ran3PSIndex] + " was "],  ["ābant", "They were "]];
+//var perEndingsFirstImp = [["ābam", "I was "], ["ābas", "You were "], ["ābat", "She/he/it was "], ["ābamus", "We were "], ["ābatis", "Ya'll were "], ["ābant", "They were "]];
+
+perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", thirdPerSing[ran3PSIndex] + " "], ["ērunt", "They "]];
+//var perEndingsFirstPerfect = [["ī", "I "], ["isti", "You "], ["it", "She/he/it "], ["imus", "We "], ["istis", "Ya'll "], ["ērunt", "They "]];
+
+answers = ["answerOne", "answerTwo", "answerThree", "answerFour"];
+
+}
 
 function gameOverAudio(){
        var gameOverAudio = document.getElementById("gameOverAudio");
@@ -252,12 +273,16 @@ function selectGame4(){
 
 function presentTenseVerbShuffle(){
 
+reset3PSIndex();
+
+
 countDownTimer();
 	timeleft = 15;
 	countdown = setInterval(countDownTimer,1000);
 
 
 startButton.disabled = true;
+
 
 
 shuffle(verbsFirst);
@@ -356,6 +381,8 @@ document.getElementById(answers[3]).innerHTML = perEndingsFirst[3][1] + verbsFir
 
 
 function imperfectTenseVerbShuffle(){
+
+reset3PSIndex();
 
 countDownTimer();
 	timeleft = 15;
@@ -458,6 +485,8 @@ shuffleFirstConImpTenseVerbs();
 
 
 function perfectTenseVerbShuffle(){
+
+reset3PSIndex();
 
 countDownTimer();
 	timeleft = 15;
